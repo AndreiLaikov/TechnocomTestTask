@@ -6,11 +6,12 @@ using UnityEngine;
 public class TestDateTime : MonoBehaviour
 {
     [ContextMenu("GetTime")]
-   public void GetDateTime()
+    public void GetDateTime()
     {
         var serverTime = WorldTime.GetWorldTime();
         DateTime localtime = DateTime.Now;
-        Debug.Log("Server: "+serverTime.Date);
-        Debug.Log("Local: "+localtime.Date);
+        Debug.Log("Server: " + serverTime.Date);
+        Debug.Log("Local: " + localtime.Date);
     }
+
 }
