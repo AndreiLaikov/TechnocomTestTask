@@ -31,6 +31,42 @@ MonoBehaviour:
     m_Key: 1Menu/Canvas/Background/Logo/Text (TMP)
     m_Metadata:
       m_Items: []
+  - m_Id: 69012540088320
+    m_Key: 1Menu/DailyBounsCanvas/Background/Header
+    m_Metadata:
+      m_Items: []
+  - m_Id: 69579337359360
+    m_Key: DailyMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80378084712448
+    m_Key: Day1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80611610976256
+    m_Key: Day2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81038704369664
+    m_Key: Day3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81323308867584
+    m_Key: Day4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81550266851328
+    m_Key: 1Menu/DailyBounsCanvas/Background/GameObject/DailyBonus[5]/GiftSize
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81583695454208
+    m_Key: Day5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81748258971648
+    m_Key: Day6
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
