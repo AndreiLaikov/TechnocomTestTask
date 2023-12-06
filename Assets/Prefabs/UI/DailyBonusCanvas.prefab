@@ -253,8 +253,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1/7
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
+  m_sharedMaterial: {fileID: 8109849171560417874, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -463,8 +463,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Weeekly bonus]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
+  m_sharedMaterial: {fileID: 8109849171560417874, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -579,7 +579,6 @@ GameObject:
   - component: {fileID: 7797464425599720473}
   - component: {fileID: 2893352185288071547}
   - component: {fileID: 4872323775428467158}
-  - component: {fileID: 3146945310322528217}
   m_Layer: 5
   m_Name: GiftSize
   m_TagString: Untagged
@@ -636,8 +635,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -703,56 +702,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3146945310322528217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334702018129311595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 6625499960024498222
-  references:
-    version: 2
-    RefIds:
-    - rid: 6625499960024498222
-      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 4872323775428467158}
-        m_TrackedProperties:
-          items:
-          - rid: 6625499960024498223
-          - rid: 6625499960024498224
-        m_UpdateType: 0
-    - rid: 6625499960024498223
-      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_Localized:
-          m_TableReference:
-            m_TableCollectionName: GUID:416b4a5993fab419ebc37fbdbf5513d0
-          m_TableEntryReference:
-            m_KeyId: 81550266851328
-            m_Key: 
-          m_FallbackState: 0
-          m_WaitForCompletion: 0
-          m_LocalVariables: []
-        m_PropertyPath: m_text
-    - rid: 6625499960024498224
-      type: {class: EnumTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_fontStyle
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: ru
-          value: 1
 --- !u!1 &1399766748586550378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,8 +1002,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1466,8 +1415,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1750,8 +1699,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X5
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1921,8 +1870,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '[Weeekly bonus]'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
+  m_sharedMaterial: {fileID: 8109849171560417874, guid: d1d5428a30ac8487ab5d1ac243d04d4c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2002,7 +1951,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TrackedObjects:
   - rid: 6625499960024498215
-  - rid: 6625499960024498217
   references:
     version: 2
     RefIds:
@@ -2013,7 +1961,6 @@ MonoBehaviour:
         m_TrackedProperties:
           items:
           - rid: 6625499960024498216
-          - rid: 6625499960024498219
         m_UpdateType: 0
     - rid: 6625499960024498216
       type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
@@ -2028,35 +1975,6 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         m_PropertyPath: m_text
-    - rid: 6625499960024498217
-      type: {class: TrackedRectTransform, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 8527135295661629863}
-        m_TrackedProperties:
-          items:
-          - rid: 6625499960024498218
-    - rid: 6625499960024498218
-      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_SizeDelta.y
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 30
-        - localeIdentifier:
-            m_Code: ru
-          value: 45.8503
-    - rid: 6625499960024498219
-      type: {class: EnumTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_VerticalAlignment
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 512
-        - localeIdentifier:
-            m_Code: ru
-          value: 256
 --- !u!1 &5132957356896860633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,8 +2132,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2385,8 +2303,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2825,8 +2743,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3088,8 +3006,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3503,8 +3421,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3706,7 +3624,6 @@ GameObject:
   - component: {fileID: 7385439260724608979}
   - component: {fileID: 1452005937383225352}
   - component: {fileID: 7591326376294723009}
-  - component: {fileID: 4747591676581775669}
   m_Layer: 5
   m_Name: GiftSize
   m_TagString: Untagged
@@ -3763,8 +3680,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3830,56 +3747,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4747591676581775669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8542174346792593070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 6625499960024498222
-  references:
-    version: 2
-    RefIds:
-    - rid: 6625499960024498222
-      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 7591326376294723009}
-        m_TrackedProperties:
-          items:
-          - rid: 6625499960024498223
-          - rid: 6625499960024498226
-        m_UpdateType: 0
-    - rid: 6625499960024498223
-      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_Localized:
-          m_TableReference:
-            m_TableCollectionName: GUID:416b4a5993fab419ebc37fbdbf5513d0
-          m_TableEntryReference:
-            m_KeyId: 81550266851328
-            m_Key: 
-          m_FallbackState: 0
-          m_WaitForCompletion: 0
-          m_LocalVariables: []
-        m_PropertyPath: m_text
-    - rid: 6625499960024498226
-      type: {class: EnumTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
-      data:
-        m_PropertyPath: m_fontStyle
-        m_VariantData:
-        - localeIdentifier:
-            m_Code: en
-          value: 1
-        - localeIdentifier:
-            m_Code: ru
-          value: 1
 --- !u!1 &8685442050533743486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,8 +4035,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: X10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4339,8 +4206,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DAY1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
+  m_sharedMaterial: {fileID: -2917906054751418642, guid: 46213ecbd80464f00ad9c593a3c766f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
