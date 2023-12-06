@@ -26,16 +26,12 @@ MonoBehaviour:
     m_Localized: '[PLAY]'
     m_Metadata:
       m_Items: []
-  - m_Id: 41975469301760
-    m_Localized: "Game Logo \u21161"
-    m_Metadata:
-      m_Items: []
   - m_Id: 69012540088320
     m_Localized: '[Weeekly bonus]'
     m_Metadata:
       m_Items: []
   - m_Id: 69579337359360
-    m_Localized: '[Come back everyday to collect your reward!]'
+    m_Localized: '[CONGRATS!]'
     m_Metadata:
       m_Items: []
   - m_Id: 80378084712448
@@ -54,16 +50,16 @@ MonoBehaviour:
     m_Localized: DAY4
     m_Metadata:
       m_Items: []
-  - m_Id: 81550266851328
-    m_Localized: X10
-    m_Metadata:
-      m_Items: []
   - m_Id: 81583695454208
     m_Localized: DAY5
     m_Metadata:
       m_Items: []
   - m_Id: 81748258971648
     m_Localized: DAY6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 331210575306752
+    m_Localized: DAY7
     m_Metadata:
       m_Items: []
   references:

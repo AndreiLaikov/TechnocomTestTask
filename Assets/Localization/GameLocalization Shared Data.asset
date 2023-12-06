@@ -19,24 +19,16 @@ MonoBehaviour:
     m_Key: LabelPlay
     m_Metadata:
       m_Items: []
-  - m_Id: 14106189881344
-    m_Key: New Entry
-    m_Metadata:
-      m_Items: []
   - m_Id: 41685416402944
-    m_Key: 1Menu/Canvas/Background/ButtonPlay/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 41975469301760
-    m_Key: 1Menu/Canvas/Background/Logo/Text (TMP)
+    m_Key: ButtonPlay
     m_Metadata:
       m_Items: []
   - m_Id: 69012540088320
-    m_Key: 1Menu/DailyBounsCanvas/Background/Header
+    m_Key: WeeklyBonus
     m_Metadata:
       m_Items: []
   - m_Id: 69579337359360
-    m_Key: DailyMessage
+    m_Key: Congrats
     m_Metadata:
       m_Items: []
   - m_Id: 80378084712448
@@ -55,16 +47,16 @@ MonoBehaviour:
     m_Key: Day4
     m_Metadata:
       m_Items: []
-  - m_Id: 81550266851328
-    m_Key: 1Menu/DailyBounsCanvas/Background/GameObject/DailyBonus[5]/GiftSize
-    m_Metadata:
-      m_Items: []
   - m_Id: 81583695454208
     m_Key: Day5
     m_Metadata:
       m_Items: []
   - m_Id: 81748258971648
     m_Key: Day6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 331210575306752
+    m_Key: Day7Congrats
     m_Metadata:
       m_Items: []
   m_Metadata:

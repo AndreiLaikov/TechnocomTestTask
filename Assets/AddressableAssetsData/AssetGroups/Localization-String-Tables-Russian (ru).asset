@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 90f2faf7425944d0dab7f9629deb9f29
-  m_SerializeEntries:
-  - m_GUID: 7f8971006edd24151a48340bab161313
-    m_Address: GameLocalization_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 41f1759fe4bab434fbabc152311cfc89, type: 2}
   m_SchemaSet:
