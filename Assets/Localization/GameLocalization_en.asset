@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41685416402944
+    m_Localized: '[Shop]'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380709767208960
     m_Localized: '[PLAY]'
     m_Metadata:
       m_Items: []
@@ -50,6 +54,10 @@ MonoBehaviour:
     m_Localized: DAY4
     m_Metadata:
       m_Items: []
+  - m_Id: 380577004904448
+    m_Localized: Tickets
+    m_Metadata:
+      m_Items: []
   - m_Id: 81583695454208
     m_Localized: DAY5
     m_Metadata:
@@ -60,6 +68,34 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 331210575306752
     m_Localized: DAY7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388629808537600
+    m_Localized: '[Epic chest]'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 390423087407104
+    m_Localized: '[Lucky chest]'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391016589811712
+    m_Localized: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396147771301888
+    m_Localized: Character 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396370795028480
+    m_Localized: Character 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401159071195136
+    m_Localized: Location
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401612458680320
+    m_Localized: Location 1
     m_Metadata:
       m_Items: []
   references:

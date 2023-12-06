@@ -528,15 +528,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2572762995518618570, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 28.966223
       objectReference: {fileID: 0}
-    - target: {fileID: 4315066514074533381, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 6471567831111131939, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_Name
       value: MenuViewCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6471567831111131939, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7903578582881694719, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_Pivot.x

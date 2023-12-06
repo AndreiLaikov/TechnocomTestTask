@@ -20,7 +20,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 41685416402944
-    m_Key: ButtonPlay
+    m_Key: Shop
     m_Metadata:
       m_Items: []
   - m_Id: 69012540088320
@@ -57,6 +57,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 331210575306752
     m_Key: Day7Congrats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380577004904448
+    m_Key: Tickets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 380709767208960
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 388629808537600
+    m_Key: EpicChest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 390423087407104
+    m_Key: LuckyChest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391016589811712
+    m_Key: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396147771301888
+    m_Key: Character1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396370795028480
+    m_Key: Character2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401159071195136
+    m_Key: Locations
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401612458680320
+    m_Key: Location1
     m_Metadata:
       m_Items: []
   m_Metadata:
