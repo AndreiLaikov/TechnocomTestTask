@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &365766365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365766367}
+  - component: {fileID: 365766366}
+  m_Layer: 0
+  m_Name: WorldTime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &365766366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365766365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d1c992e5e55840a88ffcd1f7e267648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &365766367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365766365}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +292,11 @@ Transform:
   - {fileID: 1335069963}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &916769051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6011132703801479833, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
+  m_PrefabInstance: {fileID: 6213585294977881821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1335069960
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +365,110 @@ Transform:
   m_Children: []
   m_Father: {fileID: 844754607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1486010718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486010719}
+  - component: {fileID: 1486010720}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486010719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486010718}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1486010720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486010718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d644f9714fd514d15ab346fd9dec8b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dailuBonusController: {fileID: 1576925399}
+  lastDayPlayed_key: LastDayPlayed
+  daysInRow_key: DaysInRow
+--- !u!114 &1576925399 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5931626164152123466, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
+  m_PrefabInstance: {fileID: 6213585294977881821}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a745bc9d8aa34fe8ac42f448ec6aa9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1960338885
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960338887}
+  - component: {fileID: 1960338886}
+  m_Layer: 0
+  m_Name: Tests
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1960338886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960338885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27ed805b266d4b09a1a7f1c9ef51463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minusDays: -1
+  daysInRow: 6
+--- !u!4 &1960338887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960338885}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5425257586743521050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -326,7 +479,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2718581544985112538, guid: 031eb809b46bc4de7b7aad9adf097d6b, type: 3}
       propertyPath: m_Name
-      value: Day7BonusCanvas
+      value: WeeklyBonusCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 2718581544985112538, guid: 031eb809b46bc4de7b7aad9adf097d6b, type: 3}
       propertyPath: m_IsActive
@@ -528,7 +681,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2572762995518618570, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 28.966223
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6471567831111131939, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_Name
@@ -536,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6471567831111131939, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7903578582881694719, guid: 8852b0b45358c4bd8979ae4da16894ac, type: 3}
       propertyPath: m_Pivot.x
@@ -633,11 +786,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 947795774866322501, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 947795774866322501, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 959442826486286051, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
       propertyPath: m_Pivot.x
@@ -732,6 +885,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5931626164152123466, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
+      propertyPath: DailyBonusCanvas
+      value: 
+      objectReference: {fileID: 916769051}
+    - target: {fileID: 5931626164152123466, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
       propertyPath: dailyBonusDatas.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -779,6 +936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DailyBonusCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6011132703801479833, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6507640225133125444, guid: deec3bcc43a354473b3f234a3908d083, type: 3}
       propertyPath: m_Camera
       value: 
@@ -797,3 +958,6 @@ SceneRoots:
   - {fileID: 6213585294977881821}
   - {fileID: 5425257586743521050}
   - {fileID: 6178297997047271495}
+  - {fileID: 1486010719}
+  - {fileID: 365766367}
+  - {fileID: 1960338887}

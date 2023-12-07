@@ -11,31 +11,22 @@ namespace TechnoApp.Dailybonus
         [SerializeField] private TextMeshProUGUI dayNumber;
         [SerializeField] private TextMeshProUGUI giftSize;
         [SerializeField] private Button dailyBonusButton;
-        [SerializeField] private Image RecievedCheckmark;
 
         public DailyBonusModel model;
+        public DailyBonusController controller;
 
         public void Start()
         {
             dayNumber.text = PeriodName + model.DayNumber.ToString();
             giftSize.text = Prefix + model.GiftSize.ToString();
-
-            ModelIsOpening();
-            ModelIsSetRecieving();
-
-            //dailyBonusButton.onClick.AddListener(()=>GetBonus());
-        }
-
-        private void ModelIsOpening()
-        {
             dailyBonusButton.interactable = model.IsOpened;
+
+            dailyBonusButton.onClick.AddListener(()=>GetBonus());
         }
 
-        private void ModelIsSetRecieving()
+        private void GetBonus()
         {
-            RecievedCheckmark.enabled = model.IsRecieved;
-            dailyBonusButton.interactable = !model.IsRecieved;
+            controller.CloseUI();
         }
-
     }
 }
