@@ -27,6 +27,7 @@ namespace TechnoApp.Dailybonus
         private void GetBonus()
         {
             controller.CloseUI();
+            controller.OnBonusRecieved(model.GiftSize);
         }
     }
 }

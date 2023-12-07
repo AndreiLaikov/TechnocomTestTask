@@ -43,5 +43,9 @@ namespace TechnoApp.Dailybonus
             DailyBonusCanvas.SetActive(false);
         }
 
+        public void OnBonusRecieved(int value)
+        {
+            GameController.Instance.AddCurrency(value);
+        }
     }
 }

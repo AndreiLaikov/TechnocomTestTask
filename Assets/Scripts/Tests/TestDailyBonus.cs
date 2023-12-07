@@ -17,6 +17,6 @@ public class TestDailyBonus : MonoBehaviour
     [ContextMenu("SetDaysInRow")]
     private void SetDaysInRow()
     {
-        PlayerPrefs.SetString(GameController.Instance.daysInRow_key, daysInRow.ToString());
+        PlayerPrefs.SetInt(GameController.Instance.daysInRow_key, daysInRow);
     }
 }

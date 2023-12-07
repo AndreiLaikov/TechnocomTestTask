@@ -13,11 +13,28 @@ namespace TechnoApp
         public string lastDayPlayed_key = "LastDayPlayed";
         public string daysInRow_key = "DaysInRow";
 
+        [Header("Currency")]
         private int currentCurrency;
+        public string currency_key = "CurrentCurrency";
+        public event Action<int> CurrencyRecieved;
 
         private void Start()
         {
             CalculateDaysInRow();
+            GetCurrency();
+        }
+
+        public void GetCurrency()
+        {
+            currentCurrency = PlayerPrefs.GetInt(currency_key);
+        }
+
+        public void AddCurrency(int value)
+        {
+            currentCurrency += value;
+            PlayerPrefs.SetInt(currency_key, currentCurrency);
+
+            CurrencyRecieved?.Invoke(currentCurrency);
         }
 
         private void CalculateDaysInRow()
@@ -25,15 +42,14 @@ namespace TechnoApp
             DateTime lastDayPlayed;
             DateTime.TryParse(PlayerPrefs.GetString(lastDayPlayed_key), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out lastDayPlayed);
 
-            var now = WorldTime.Instance.GetWorldTime();
-            var hoursSpan = (now - lastDayPlayed).TotalHours;
-            Debug.Log("span " + hoursSpan);
+            var dateNow = WorldTime.Instance.GetWorldTime();
+            var hoursSpan = (dateNow - lastDayPlayed).TotalHours;
+
             if (hoursSpan < 24)
                 return;
 
-            int.TryParse(PlayerPrefs.GetString(daysInRow_key), out daysInRow);
+            daysInRow = PlayerPrefs.GetInt(daysInRow_key);
 
-            Debug.Log("days in prefs " + daysInRow);
             if (hoursSpan > 24 && hoursSpan < 48)
             {
                 daysInRow++;
@@ -43,10 +59,10 @@ namespace TechnoApp
                 daysInRow = 0;
             }
 
+            PlayerPrefs.SetInt(daysInRow_key, daysInRow);
+            PlayerPrefs.SetString(lastDayPlayed_key, dateNow.ToString());
+
             dailuBonusController.ShowUI();
-            Debug.Log("after calculate " + daysInRow);
-            PlayerPrefs.SetString(daysInRow_key, daysInRow.ToString());
-            PlayerPrefs.SetString(lastDayPlayed_key, now.ToString());
         }
 
         public int GetDaysInRow()
