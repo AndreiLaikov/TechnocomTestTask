@@ -98,6 +98,10 @@ MonoBehaviour:
     m_Localized: Location 1
     m_Metadata:
       m_Items: []
+  - m_Id: 438423822262272
+    m_Localized: '[Come back everyday to collect your reward!]'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
