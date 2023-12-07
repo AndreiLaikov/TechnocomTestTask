@@ -6,7 +6,7 @@ namespace TechnoApp.Dailybonus
 {
     public class DailyBonusView : MonoBehaviour
     {
-        public string PeriodName = "Day";
+        public string PeriodName = "DAY";
         public string Prefix = "x";
         [SerializeField] private TextMeshProUGUI dayNumber;
         [SerializeField] private TextMeshProUGUI giftSize;
@@ -15,7 +15,7 @@ namespace TechnoApp.Dailybonus
         public DailyBonusModel model;
         public DailyBonusController controller;
 
-        public void Start()
+        private void Start()
         {
             dayNumber.text = PeriodName + model.DayNumber.ToString();
             giftSize.text = Prefix + model.GiftSize.ToString();
@@ -26,7 +26,6 @@ namespace TechnoApp.Dailybonus
 
         private void GetBonus()
         {
-            controller.CloseUI();
             controller.OnBonusRecieved(model.GiftSize);
         }
     }

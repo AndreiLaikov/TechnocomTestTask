@@ -1,51 +1,128 @@
+using System;
+using System.Globalization;
+using System.Net;
 using UnityEngine;
 
 namespace TechnoApp.Dailybonus
 {
     public class DailyBonusController : MonoBehaviour
     {
-        public GameObject DailyBonusCanvas;
+        private bool isShownToday;
+        private int daysInRow;
+        private string lastDayPlayed_key = "LastDayPlayed";
+        private string daysInRow_key = "DaysInRow";
+
+        public event Action<int> BonusRecieved;
+
+        [Header("UiElements")]
+        public GameObject DailyBonusUI;
+        public GameObject WeeklyBonusUI;
+        public ProgressBar progress;
+        private GameObject activeUI;
+
+        [Header("Models")]
         [SerializeField] private DailyBonusModel[] DailyBonusModels;
+        [SerializeField] private DailyBonusModel WeeklyBonusModel;
+
+        [Header("Views")]
+        [SerializeField] private Transform dailyBonusesParent;
         [SerializeField] private DailyBonusView Template;
-        private DailyBonusView[] views;
-        
+        [SerializeField] private DailyBonusView WeeklyBonusView;
 
         private void Start()
         {
-            views = new DailyBonusView[DailyBonusModels.Length];
-            CreatePanel();
+            DaysInRowCalculate();
+            PanelsCreate();
+            ShowUI();
         }
 
-        private void CreatePanel()
+        private void DaysInRowCalculate()
         {
-            int daysInRow = GameController.Instance.GetDaysInRow();
+            DateTime lastDayPlayed;
+            DateTime.TryParse(PlayerPrefs.GetString(lastDayPlayed_key), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out lastDayPlayed);
 
+            var dateNow = GetWorldTime();
+            var hoursSpan = (dateNow - lastDayPlayed).TotalHours;
+
+            if (hoursSpan < 24)
+            {
+                isShownToday = true;
+                return;
+            }
+
+            daysInRow = PlayerPrefs.GetInt(daysInRow_key);
+            if (hoursSpan > 24 && hoursSpan < 48)
+            {
+                daysInRow++;
+            }
+            else if (hoursSpan > 48)
+            {
+                daysInRow = 0;
+            }
+
+            PlayerPrefs.SetInt(daysInRow_key, daysInRow);
+            PlayerPrefs.SetString(lastDayPlayed_key, dateNow.ToString());
+        }
+
+        private void PanelsCreate()
+        {
             for (int i = 0; i < DailyBonusModels.Length; i++)
             {
-                views[i] = Instantiate(Template, transform);
-                views[i].model = DailyBonusModels[i];
-                views[i].controller = this;
+                DailyBonusModels[i].IsOpened = i <= daysInRow;
+                var obj = Instantiate(Template, dailyBonusesParent);
+                obj.model = DailyBonusModels[i];
+                obj.controller = this;
             }
 
-            for (int i = 0; i < views.Length; i++)
+            WeeklyBonusModel.IsOpened = true;
+            WeeklyBonusView.model = WeeklyBonusModel;
+            WeeklyBonusView.controller = this;
+
+            progress.SetValues(daysInRow);
+        }
+
+        private void ShowUI()
+        {
+            if (isShownToday)
+                return;
+
+            if (daysInRow < 6)
             {
-                views[i].model.IsOpened = i <= daysInRow;
+                DailyBonusUI.SetActive(true);
+                activeUI = DailyBonusUI;
             }
-        }
-
-        public void ShowUI()
-        {
-            DailyBonusCanvas.SetActive(true);
-        }
-
-        public void CloseUI()
-        {
-            DailyBonusCanvas.SetActive(false);
+            else
+            {
+                WeeklyBonusUI.SetActive(true);
+                activeUI = WeeklyBonusUI;
+                daysInRow = 0;
+                PlayerPrefs.SetInt(daysInRow_key, daysInRow);
+            }
         }
 
         public void OnBonusRecieved(int value)
         {
-            GameController.Instance.AddCurrency(value);
+            activeUI.SetActive(false);
+            BonusRecieved?.Invoke(value);
+        }
+
+        private DateTime GetWorldTime()
+        {
+            try
+            {
+                var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.google.com");
+                var response = myHttpWebRequest.GetResponse();
+                string todaysDates = response.Headers["date"];
+                return DateTime.ParseExact(todaysDates,
+                                           "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
+                                           CultureInfo.InvariantCulture.DateTimeFormat,
+                                           DateTimeStyles.AssumeUniversal);
+            }
+            catch
+            {
+                Debug.LogWarning("No internet connection");
+                return DateTime.Now;//todo change to show pop-up "No internet" or don't show DailyBonus View
+            }
         }
     }
 }
