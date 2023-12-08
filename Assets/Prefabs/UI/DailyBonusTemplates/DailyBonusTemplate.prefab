@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 7003651014630047013}
   - component: {fileID: 123450428768806520}
   - component: {fileID: -8809278625485618399}
+  - component: {fileID: 6799856453122140815}
   m_Layer: 5
   m_Name: DailyBonusTemplate
   m_TagString: Untagged
@@ -485,3 +486,16 @@ MonoBehaviour:
   giftSize: {fileID: 506252737947549649}
   dailyBonusButton: {fileID: 123450428768806520}
   model: {fileID: 0}
+  controller: {fileID: 0}
+--- !u!114 &6799856453122140815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8257367978553937308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

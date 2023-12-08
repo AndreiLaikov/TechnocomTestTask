@@ -43,6 +43,7 @@ namespace TechnoApp.Dailybonus
 
             var dateNow = GetWorldTime();
             var hoursSpan = (dateNow - lastDayPlayed).TotalHours;
+            daysInRow = PlayerPrefs.GetInt(daysInRow_key);
 
             if (hoursSpan < 24)
             {
@@ -50,7 +51,6 @@ namespace TechnoApp.Dailybonus
                 return;
             }
 
-            daysInRow = PlayerPrefs.GetInt(daysInRow_key);
             if (hoursSpan > 24 && hoursSpan < 48)
             {
                 daysInRow++;
@@ -88,16 +88,25 @@ namespace TechnoApp.Dailybonus
 
             if (daysInRow < 6)
             {
-                DailyBonusUI.SetActive(true);
                 activeUI = DailyBonusUI;
             }
             else
             {
-                WeeklyBonusUI.SetActive(true);
                 activeUI = WeeklyBonusUI;
                 daysInRow = 0;
                 PlayerPrefs.SetInt(daysInRow_key, daysInRow);
             }
+
+            ShowActiveUI();
+        }
+
+        public void ShowActiveUI()
+        {
+            if (activeUI == null)
+            {
+                activeUI = DailyBonusUI;
+            }
+            activeUI.SetActive(true);
         }
 
         public void OnBonusRecieved(int value)
