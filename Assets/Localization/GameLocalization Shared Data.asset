@@ -99,6 +99,10 @@ MonoBehaviour:
     m_Key: ComeBackMessage
     m_Metadata:
       m_Items: []
+  - m_Id: 1240214566592512
+    m_Key: '[Epic Chest]'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
