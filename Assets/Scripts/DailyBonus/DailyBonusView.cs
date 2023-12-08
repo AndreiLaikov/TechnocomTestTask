@@ -8,9 +8,10 @@ namespace TechnoApp.Dailybonus
     {
         public string PeriodName = "DAY";
         public string Prefix = "x";
-        [SerializeField] private TextMeshProUGUI dayNumber;
-        [SerializeField] private TextMeshProUGUI giftSize;
+        [SerializeField] private TMP_Text dayNumber;
+        [SerializeField] private TMP_Text giftSize;
         [SerializeField] private Button dailyBonusButton;
+        [SerializeField] private Image isRecieved;
 
         public DailyBonusModel model;
         public DailyBonusController controller;
@@ -19,14 +20,24 @@ namespace TechnoApp.Dailybonus
         {
             dayNumber.text = PeriodName + model.DayNumber.ToString();
             giftSize.text = Prefix + model.GiftSize.ToString();
-            dailyBonusButton.interactable = model.IsOpened;
+            isRecieved.enabled = model.IsRecieved;
+
+            dailyBonusButton.interactable = model.IsOpened && !model.IsRecieved;
 
             dailyBonusButton.onClick.AddListener(()=>GetBonus());
+        }
+
+        public void InteractableChange()
+        {
+            isRecieved.enabled = model.IsRecieved;
+            dailyBonusButton.interactable = model.IsOpened && !model.IsRecieved;
         }
 
         private void GetBonus()
         {
             controller.OnBonusRecieved(model.GiftSize);
+            model.IsRecieved = true;
+            InteractableChange();
         }
     }
 }

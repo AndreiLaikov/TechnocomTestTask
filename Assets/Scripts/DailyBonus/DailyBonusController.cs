@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.Net;
+using TechnoApp.Managers;
 using UnityEngine;
 
 namespace TechnoApp.Dailybonus
@@ -11,8 +12,6 @@ namespace TechnoApp.Dailybonus
         private int daysInRow;
         private string lastDayPlayed_key = "LastDayPlayed";
         private string daysInRow_key = "DaysInRow";
-
-        public event Action<int> BonusRecieved;
 
         [Header("UiElements")]
         public GameObject DailyBonusUI;
@@ -112,7 +111,7 @@ namespace TechnoApp.Dailybonus
         public void OnBonusRecieved(int value)
         {
             activeUI.SetActive(false);
-            BonusRecieved?.Invoke(value);
+            CurrencyManager.Instance.AddCurrency(value);
         }
 
         private DateTime GetWorldTime()

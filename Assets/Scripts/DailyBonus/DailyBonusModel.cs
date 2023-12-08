@@ -8,5 +8,6 @@ namespace TechnoApp.Dailybonus
         public int DayNumber;
         public int GiftSize;
         public bool IsOpened;
+        public bool IsRecieved;
     }
 }
