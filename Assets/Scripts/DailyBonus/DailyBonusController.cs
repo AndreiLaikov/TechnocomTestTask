@@ -61,6 +61,7 @@ namespace TechnoApp.Dailybonus
 
             PlayerPrefs.SetInt(daysInRow_key, daysInRow);
             PlayerPrefs.SetString(lastDayPlayed_key, dateNow.ToString());
+            PlayerPrefs.Save();
         }
 
         private void PanelsCreate()
@@ -94,6 +95,7 @@ namespace TechnoApp.Dailybonus
                 activeUI = WeeklyBonusUI;
                 daysInRow = 0;
                 PlayerPrefs.SetInt(daysInRow_key, daysInRow);
+                PlayerPrefs.Save();
             }
 
             ShowActiveUI();

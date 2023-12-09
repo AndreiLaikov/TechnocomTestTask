@@ -9,8 +9,8 @@ namespace TechnoApp.Managers
         public AudioClip buttonSound;
         public AudioClip music;
 
-        public bool IsMusicMute { get; private set; }
-        public bool IsSoundsMute { get; private set; }
+        public bool IsMusicMute;
+        public bool IsSoundsMute;
 
         private string isSoundsMute_key = "IsSoundMute";
         private string isMusicMute_key = "IsMusicMute";
@@ -34,7 +34,7 @@ namespace TechnoApp.Managers
         public void SetSoundsMute(bool value)
         {
             IsSoundsMute = value;
-            SavePrefs(isSoundsMute_key,IsSoundsMute);
+            SavePrefs(isSoundsMute_key, IsSoundsMute);
         }
 
         public void SetMusicMute(bool value)

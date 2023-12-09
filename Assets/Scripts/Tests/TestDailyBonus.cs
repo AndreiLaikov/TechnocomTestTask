@@ -14,12 +14,14 @@ public class TestDailyBonus : MonoBehaviour
     {
         var now = GetWorldTime().AddDays(minusDays);
         PlayerPrefs.SetString("LastDayPlayed", now.ToString());
+        PlayerPrefs.Save();
     }
 
     [ContextMenu("SetDaysInRow")]
     private void SetDaysInRow()
     {
         PlayerPrefs.SetInt("DaysInRow", daysInRow);
+        PlayerPrefs.Save();
     }
 
     private DateTime GetWorldTime()
