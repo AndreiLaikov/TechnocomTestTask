@@ -1,5 +1,4 @@
 using System;
-using TechnoApp.Dailybonus;
 using UnityEngine;
 
 namespace TechnoApp.Managers
