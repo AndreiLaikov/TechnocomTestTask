@@ -408,9 +408,45 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 4965174960090632778, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609941029193735782, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7727413660567298006, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
       propertyPath: m_Name
       value: LevelCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9130633087043874888, guid: edf8ba923e6cf4b1584a38b12b92aac6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

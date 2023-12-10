@@ -9,6 +9,8 @@ public class ProductController : MonoBehaviour
     public void Init(ProductModel model)
     {
         productModel = model;
+        var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+        productModel.IsClosed = currentLevel < productModel.Condition;
         manager = CurrencyManager.Instance;
     }
 

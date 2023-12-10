@@ -397,7 +397,6 @@ GameObject:
   - component: {fileID: 1127751476329003953}
   - component: {fileID: 381624188011697889}
   - component: {fileID: 4352105349409029763}
-  - component: {fileID: 7076298612311098409}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -482,39 +481,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7076298612311098409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4528605626169140993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acc57d91e83094467bebbe8af09d1297, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levels:
-  - {fileID: 195641626587959460}
-  - {fileID: 4287919558610853148}
-  - {fileID: 8453268807563232110}
-  - {fileID: 3396786981107928609}
-  - {fileID: 3127037381399444542}
-  - {fileID: 7723150237178436446}
-  - {fileID: 5354715996201797237}
-  - {fileID: 4970062362893855428}
-  - {fileID: 1312305924292851584}
-  - {fileID: 4300651348630527390}
-  - {fileID: 2741584213124055583}
-  - {fileID: 2093287287073286388}
-  - {fileID: 4640703099483847112}
-  - {fileID: 5570155613874131193}
-  - {fileID: 5434190625830238681}
-  - {fileID: 5604738898339430712}
-  - {fileID: 3772705439880898209}
-  - {fileID: 9109700075941374884}
-  - {fileID: 2876497946559573674}
-  - {fileID: 8004064331050390352}
 --- !u!1 &4698192085344696540
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +583,7 @@ GameObject:
   - component: {fileID: 3571259587964707748}
   - component: {fileID: 4624824263762126488}
   - component: {fileID: 5956061329925694155}
+  - component: {fileID: 1829344049387698941}
   m_Layer: 5
   m_Name: LevelCanvas
   m_TagString: Untagged
@@ -709,6 +676,39 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1829344049387698941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727413660567298006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc57d91e83094467bebbe8af09d1297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levels:
+  - {fileID: 195641626587959460}
+  - {fileID: 4287919558610853148}
+  - {fileID: 8453268807563232110}
+  - {fileID: 3396786981107928609}
+  - {fileID: 3127037381399444542}
+  - {fileID: 7723150237178436446}
+  - {fileID: 5354715996201797237}
+  - {fileID: 4970062362893855428}
+  - {fileID: 1312305924292851584}
+  - {fileID: 4300651348630527390}
+  - {fileID: 2741584213124055583}
+  - {fileID: 2093287287073286388}
+  - {fileID: 4640703099483847112}
+  - {fileID: 5570155613874131193}
+  - {fileID: 5434190625830238681}
+  - {fileID: 5604738898339430712}
+  - {fileID: 3772705439880898209}
+  - {fileID: 9109700075941374884}
+  - {fileID: 2876497946559573674}
+  - {fileID: 8004064331050390352}
 --- !u!1001 &206796545353140383
 PrefabInstance:
   m_ObjectHideFlags: 0
