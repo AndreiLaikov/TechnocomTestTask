@@ -1,8 +1,8 @@
-
 using UnityEngine;
 
 namespace TechnoApp.Managers
 {
+    [RequireComponent (typeof(AudioSource))]
     public class AudioManager : Singleton<AudioManager>
     {
         private AudioSource audioSource;

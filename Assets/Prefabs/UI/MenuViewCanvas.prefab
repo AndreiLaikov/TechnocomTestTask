@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 457058570220963820}
   - component: {fileID: 7865360501764609336}
   - component: {fileID: 728565161805818479}
+  - component: {fileID: 2158084731877179669}
+  - component: {fileID: 4929326787066384624}
   m_Layer: 5
   m_Name: ButtonShop
   m_TagString: Untagged
@@ -120,7 +122,44 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7865360501764609336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4929326787066384624}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2158084731877179669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135184822396294259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4929326787066384624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135184822396294259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70f8072ccd76410091b1d5ab041efcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 2Shop
 --- !u!1 &676610826796502543
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +171,7 @@ GameObject:
   - component: {fileID: 2314035685491311182}
   - component: {fileID: 59374919922943183}
   - component: {fileID: 1918341182444796875}
+  - component: {fileID: 5686018877822874257}
   m_Layer: 5
   m_Name: CurrencyValue
   m_TagString: Untagged
@@ -216,7 +256,7 @@ MonoBehaviour:
   m_fontSize: 12
   m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 5
   m_fontSizeMax: 12
   m_fontStyle: 1
@@ -255,6 +295,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5686018877822874257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676610826796502543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd513ad017844479d860824799e74fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyCount: {fileID: 1918341182444796875}
 --- !u!1 &989564674263835329
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +319,7 @@ GameObject:
   - component: {fileID: 3550620731432769452}
   - component: {fileID: 1568864404940128974}
   - component: {fileID: 3910902869826387299}
+  - component: {fileID: 6367982675038724029}
   - component: {fileID: 5421746325984686677}
   m_Layer: 5
   m_Name: ButtonSettings
@@ -332,6 +386,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6367982675038724029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989564674263835329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5421746325984686677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +441,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3910902869826387299}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1680531838981215322
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +466,7 @@ GameObject:
   - component: {fileID: 2515135718886234590}
   - component: {fileID: 3211219027935305856}
   - component: {fileID: 3351482361882387924}
+  - component: {fileID: 5834230642534786185}
   m_Layer: 5
   m_Name: ButtonGift
   m_TagString: Untagged
@@ -496,7 +575,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3211219027935305856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TechnoApp.Dailybonus.DailyBonusController, Assembly-CSharp
+        m_MethodName: ShowActiveUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5834230642534786185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680531838981215322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2438984942384473952
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +613,8 @@ GameObject:
   - component: {fileID: 8299535777150094357}
   - component: {fileID: 7263626414103647835}
   - component: {fileID: 6630524487561803925}
+  - component: {fileID: 5463722230906331773}
+  - component: {fileID: 5481908173739417049}
   m_Layer: 5
   m_Name: ButtonPlay
   m_TagString: Untagged
@@ -633,6 +738,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 2.9689753
+--- !u!114 &5463722230906331773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438984942384473952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5481908173739417049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2438984942384473952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70f8072ccd76410091b1d5ab041efcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 3Levels
 --- !u!1 &3067358407734549706
 GameObject:
   m_ObjectHideFlags: 0
