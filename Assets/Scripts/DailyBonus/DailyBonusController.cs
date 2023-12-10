@@ -126,6 +126,8 @@ namespace TechnoApp.Dailybonus
                 var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.google.com");
                 var response = myHttpWebRequest.GetResponse();
                 string todaysDates = response.Headers["date"];
+                response.Close();
+
                 return DateTime.ParseExact(todaysDates,
                                            "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
                                            CultureInfo.InvariantCulture.DateTimeFormat,
@@ -133,7 +135,7 @@ namespace TechnoApp.Dailybonus
             }
             catch
             {
-               // Debug.LogWarning("No internet connection");
+                Debug.LogWarning("No internet connection");
                 return DateTime.Now;//todo change to show pop-up "No internet" or don't show DailyBonus View
             }
         }

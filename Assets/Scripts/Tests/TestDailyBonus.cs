@@ -12,6 +12,8 @@ public class TestDailyBonus : MonoBehaviour
             var myHttpWebRequest = (HttpWebRequest)WebRequest.Create("http://www.google.com");
             var response = myHttpWebRequest.GetResponse();
             string todaysDates = response.Headers["date"];
+            response.Close();
+
             return DateTime.ParseExact(todaysDates,
                                        "ddd, dd MMM yyyy HH:mm:ss 'GMT'",
                                        CultureInfo.InvariantCulture.DateTimeFormat,
