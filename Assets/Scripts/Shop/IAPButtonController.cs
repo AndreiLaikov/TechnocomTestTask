@@ -2,11 +2,13 @@ using TechnoApp.Managers;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public class IAPButtonController : MonoBehaviour
+namespace TechnoApp.Shop
 {
-    public void AddCurrency(Product product)
+    public class IAPButtonController : MonoBehaviour
     {
-        
-        CurrencyManager.Instance.AddCurrency((int)product.definition.payout.quantity);
+        public void AddCurrency(Product product)
+        {
+            CurrencyManager.Instance.AddCurrency((int)product.definition.payout.quantity);
+        }
     }
 }

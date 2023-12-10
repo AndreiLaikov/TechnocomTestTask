@@ -10,7 +10,7 @@ namespace TechnoApp.Levels
         private void Awake()
         {
             levels = GetComponentsInChildren<LevelsView>();
-            currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+            currentLevel = PlayerPrefs.GetInt(StaticStrings.CurrentLevel_key, 1);
 
             foreach (LevelsView lvl in levels)
             {
@@ -36,7 +36,7 @@ namespace TechnoApp.Levels
                 currentLevel = levelNumber + 1;
             }
 
-            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+            PlayerPrefs.SetInt(StaticStrings.CurrentLevel_key, currentLevel);
             PlayerPrefs.Save();
 
             UpdateLevels();
@@ -45,7 +45,7 @@ namespace TechnoApp.Levels
         [ContextMenu("ResetProgress")]
         private void ResetProgress()
         {
-            PlayerPrefs.SetInt("CurrentLevel", 1);
+            PlayerPrefs.SetInt(StaticStrings.CurrentLevel_key, 1);
             PlayerPrefs.Save();
         }
 

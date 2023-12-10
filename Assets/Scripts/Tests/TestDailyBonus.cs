@@ -1,29 +1,10 @@
 using System;
 using System.Globalization;
 using System.Net;
-using TechnoApp;
 using UnityEngine;
 
 public class TestDailyBonus : MonoBehaviour
 {
-    public int minusDays = -1;
-    public int daysInRow;
-
-    [ContextMenu("MinusDays")]
-    private void MinusDays()
-    {
-        var now = GetWorldTime().AddDays(minusDays);
-        PlayerPrefs.SetString("LastDayPlayed", now.ToString());
-        PlayerPrefs.Save();
-    }
-
-    [ContextMenu("SetDaysInRow")]
-    private void SetDaysInRow()
-    {
-        PlayerPrefs.SetInt("DaysInRow", daysInRow);
-        PlayerPrefs.Save();
-    }
-
     private DateTime GetWorldTime()
     {
         try
@@ -44,10 +25,11 @@ public class TestDailyBonus : MonoBehaviour
 
     }
 
-    [ContextMenu("ReadPrefs")]
-    private void Read()
+    [ContextMenu("NextDay")]
+    private void MinusDays()
     {
-        Debug.Log("daysInRow " + PlayerPrefs.GetInt("DaysInRow"));
-
+        var now = GetWorldTime().AddDays(-1);
+        PlayerPrefs.SetString("LastDayPlayed", now.ToString());
+        PlayerPrefs.Save();
     }
 }

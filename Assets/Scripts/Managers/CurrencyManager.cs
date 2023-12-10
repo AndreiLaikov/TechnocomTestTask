@@ -6,7 +6,6 @@ namespace TechnoApp.Managers
     public class CurrencyManager : Singleton<CurrencyManager>
     {
         [SerializeField] private int currentCurrency;
-        public string currency_key = "CurrentCurrency";
         public event Action<int> CurrencyUpdated;
 
         private void Start()
@@ -16,14 +15,13 @@ namespace TechnoApp.Managers
 
         public int GetCurrency()
         {
-            return PlayerPrefs.GetInt(currency_key);
+            return PlayerPrefs.GetInt(StaticStrings.Currency_key);
         }
 
         public void AddCurrency(int value)
         {
             currentCurrency += value;
-            PlayerPrefs.SetInt(currency_key, currentCurrency);
-            Debug.Log("Currency add " + value);
+            PlayerPrefs.SetInt(StaticStrings.Currency_key, currentCurrency);
 
             CurrencyUpdated?.Invoke(currentCurrency);
         }

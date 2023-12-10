@@ -2,31 +2,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public class IAPButtonView : MonoBehaviour
+namespace TechnoApp.Shop
 {
-    [SerializeField] private string pricePostfix = "$";
-    [SerializeField] private string quantityPrefix = "x";
-    [SerializeField] private TMP_Text title;
-    [SerializeField] private TMP_Text price;
-    [SerializeField] private TMP_Text quantity;
-
-    public void OnProductFetched(Product product)
+    public class IAPButtonView : MonoBehaviour
     {
-        if (title != null)
-        {
-            title.text = product.metadata.localizedTitle;
-        }
+        [SerializeField] private string pricePostfix = "$";
+        [SerializeField] private string quantityPrefix = "x";
+        [SerializeField] private TMP_Text title;
+        [SerializeField] private TMP_Text price;
+        [SerializeField] private TMP_Text quantity;
 
-        if (price != null)
+        public void OnProductFetched(Product product)
         {
-            price.text = product.metadata.localizedPriceString + pricePostfix;
-        }
+            if (title != null)
+            {
+                title.text = product.metadata.localizedTitle;
+            }
 
-        if (quantity != null)
-        {
-            quantity.text = quantityPrefix + product.definition.payout.quantity.ToString();
+            if (price != null)
+            {
+                price.text = product.metadata.localizedPriceString + pricePostfix;
+            }
+
+            if (quantity != null)
+            {
+                quantity.text = quantityPrefix + product.definition.payout.quantity.ToString();
+            }
         }
     }
 }
-
-

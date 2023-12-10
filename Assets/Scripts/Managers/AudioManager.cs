@@ -6,19 +6,16 @@ namespace TechnoApp.Managers
     public class AudioManager : Singleton<AudioManager>
     {
         private AudioSource audioSource;
-        public AudioClip buttonSound;
-        public AudioClip music;
+        public AudioClip ClickSound;
+        public AudioClip Music;
 
         public bool IsMusicMute;
         public bool IsSoundsMute;
 
-        private string isSoundsMute_key = "IsSoundMute";
-        private string isMusicMute_key = "IsMusicMute";
-
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            audioSource.clip = music;
+            audioSource.clip = Music;
             LoadPrefs();
             PlayMusic();
         }
@@ -27,21 +24,21 @@ namespace TechnoApp.Managers
         {
             if (!IsSoundsMute)
             {
-                audioSource.PlayOneShot(buttonSound);
+                audioSource.PlayOneShot(ClickSound);
             }
         }
 
         public void SetSoundsMute(bool value)
         {
             IsSoundsMute = value;
-            SavePrefs(isSoundsMute_key, IsSoundsMute);
+            SavePrefs(StaticStrings.SoundsMute_key, IsSoundsMute);
         }
 
         public void SetMusicMute(bool value)
         {
             IsMusicMute = value;
             PlayMusic();
-            SavePrefs(isMusicMute_key,IsMusicMute);
+            SavePrefs(StaticStrings.MusicMute_key, IsMusicMute);
         }
 
         private void PlayMusic()
@@ -60,8 +57,8 @@ namespace TechnoApp.Managers
 
         private void LoadPrefs()
         {
-            IsSoundsMute = intToBool(PlayerPrefs.GetInt(isSoundsMute_key));
-            IsMusicMute = intToBool(PlayerPrefs.GetInt(isMusicMute_key));
+            IsSoundsMute = intToBool(PlayerPrefs.GetInt(StaticStrings.SoundsMute_key));
+            IsMusicMute = intToBool(PlayerPrefs.GetInt(StaticStrings.MusicMute_key));
         }
 
         int boolToInt(bool val)

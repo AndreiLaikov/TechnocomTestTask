@@ -11,9 +11,6 @@ namespace TechnoApp.Dailybonus
         private const int daysInWeek = 7;
         private int daysInRow;
         private int recivedCount;
-        private string lastDayPlayed_key = "LastDayPlayed";
-        private string daysInRow_key = "DaysInRow";
-        private string recivedCount_key = "RecivedCount";
 
         [Header("UiElements")]
         public GameObject DailyBonusUI;
@@ -22,10 +19,10 @@ namespace TechnoApp.Dailybonus
         private GameObject activeUI;
 
         [Header("Models")]
-        [SerializeField] private DailyBonusModel[] DailyBonusModels;
+        [SerializeField] private DailyBonusModel[] dailyBonusModels;
 
         [Header("Views")]
-        [SerializeField] private DailyBonusView[] DailyBonusViews;
+        [SerializeField] private DailyBonusView[] dailyBonusViews;
 
         private void Start()
         {
@@ -36,18 +33,19 @@ namespace TechnoApp.Dailybonus
         private void DaysInRowCalculate()
         {
             DateTime lastDayPlayed;
-            DateTime.TryParse(PlayerPrefs.GetString(lastDayPlayed_key), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out lastDayPlayed);
-
+            DateTime.TryParse(PlayerPrefs.GetString(StaticStrings.LastDayPlayed_key), DateTimeFormatInfo.InvariantInfo, DateTimeStyles.None, out lastDayPlayed);
+            
             var dateNow = GetWorldTime();
             var hoursSpan = (dateNow - lastDayPlayed).TotalHours;
-            daysInRow = PlayerPrefs.GetInt(daysInRow_key);
-            recivedCount = PlayerPrefs.GetInt(recivedCount_key, -1);
+            
+            daysInRow = PlayerPrefs.GetInt(StaticStrings.DaysInRow_key);
+            recivedCount = PlayerPrefs.GetInt(StaticStrings.RecivedCount_key, -1);
 
             if (hoursSpan < 24)
             {
                 return;
             }
-
+        
             if (hoursSpan > 24 && hoursSpan < 48)
             {
                 daysInRow++;
@@ -61,22 +59,22 @@ namespace TechnoApp.Dailybonus
                 ResetValues();
             }
 
-            PlayerPrefs.SetInt(daysInRow_key, daysInRow);
-            PlayerPrefs.SetInt(recivedCount_key, recivedCount);
-            PlayerPrefs.SetString(lastDayPlayed_key, dateNow.ToString());
+            PlayerPrefs.SetInt(StaticStrings.DaysInRow_key, daysInRow);
+            PlayerPrefs.SetInt(StaticStrings.RecivedCount_key, recivedCount);
+            PlayerPrefs.SetString(StaticStrings.LastDayPlayed_key, dateNow.ToString());
             PlayerPrefs.Save();
             ShowActiveUI();
         }
 
         private void UpdateValues()
         {
-            for (int i = 0; i < DailyBonusViews.Length; i++)
+            for (int i = 0; i < dailyBonusViews.Length; i++)
             {
-                DailyBonusModels[i].IsOpened = i <= daysInRow;
-                DailyBonusModels[i].IsRecieved = i <= recivedCount;
-                DailyBonusViews[i].model = DailyBonusModels[i];
-                DailyBonusViews[i].controller = this;
-                DailyBonusViews[i].CheckStatus();
+                dailyBonusModels[i].IsOpened = i <= daysInRow;
+                dailyBonusModels[i].IsRecieved = i <= recivedCount;
+                dailyBonusViews[i].Model = dailyBonusModels[i];
+                dailyBonusViews[i].Controller = this;
+                dailyBonusViews[i].CheckStatus();
             }
 
             progress.SetValues(daysInRow);
@@ -91,7 +89,7 @@ namespace TechnoApp.Dailybonus
 
         private void ResetModels()
         {
-            foreach (var model in DailyBonusModels)
+            foreach (var model in dailyBonusModels)
             {
                 model.IsOpened = false;
                 model.IsRecieved = false;
@@ -100,7 +98,7 @@ namespace TechnoApp.Dailybonus
 
         public void ShowActiveUI()
         {
-           if (daysInRow < daysInWeek - 1)
+            if (daysInRow < daysInWeek - 1)
             {
                 activeUI = DailyBonusUI;
             }
@@ -115,7 +113,7 @@ namespace TechnoApp.Dailybonus
         public void OnBonusRecieved(int value)
         {
             recivedCount++;
-            PlayerPrefs.SetInt(recivedCount_key, recivedCount);
+            PlayerPrefs.SetInt(StaticStrings.RecivedCount_key, recivedCount);
             PlayerPrefs.Save();
             activeUI.SetActive(false);
             CurrencyManager.Instance.AddCurrency(value);
@@ -135,7 +133,7 @@ namespace TechnoApp.Dailybonus
             }
             catch
             {
-                Debug.LogWarning("No internet connection");
+               // Debug.LogWarning("No internet connection");
                 return DateTime.Now;//todo change to show pop-up "No internet" or don't show DailyBonus View
             }
         }

@@ -13,13 +13,13 @@ namespace TechnoApp.Dailybonus
         [SerializeField] private Button dailyBonusButton;
         [SerializeField] private Image isRecieved;
 
-        public DailyBonusModel model;
-        public DailyBonusController controller;
+        public DailyBonusModel Model;
+        public DailyBonusController Controller;
 
         private void Start()
         {
-            dayNumber.text = PeriodName + model.DayNumber.ToString();
-            giftSize.text = Prefix + model.GiftSize.ToString();
+            dayNumber.text = PeriodName + Model.DayNumber.ToString();
+            giftSize.text = Prefix + Model.GiftSize.ToString();
             CheckStatus();
 
             dailyBonusButton.onClick.AddListener(()=>GetBonus());
@@ -27,14 +27,14 @@ namespace TechnoApp.Dailybonus
 
         public void CheckStatus()
         {
-            isRecieved.enabled = model.IsRecieved;
-            dailyBonusButton.interactable = model.IsOpened && !model.IsRecieved;
+            isRecieved.enabled = Model.IsRecieved;
+            dailyBonusButton.interactable = Model.IsOpened && !Model.IsRecieved;
         }
 
         private void GetBonus()
         {
-            controller.OnBonusRecieved(model.GiftSize);
-            model.IsRecieved = true;
+            Controller.OnBonusRecieved(Model.GiftSize);
+            Model.IsRecieved = true;
             CheckStatus();
         }
     }

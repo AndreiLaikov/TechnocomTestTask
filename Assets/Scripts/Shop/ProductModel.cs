@@ -1,33 +1,36 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ProductData", menuName = "Product Data", order = 51)]
-public class ProductModel : ScriptableObject
+namespace TechnoApp.Shop
 {
-    public string ProductName;
-    public int ProductCost;
-    public TypeOfProduct ProductType;
-    public int Condition;
-    public bool IsClosed;
-    public bool IsBought;
-
-    public event Action StateChanged;
-
-    public enum TypeOfProduct
+    [CreateAssetMenu(fileName = "ProductData", menuName = "Product Data", order = 51)]
+    public class ProductModel : ScriptableObject
     {
-        Skin,
-        Location
-    }
+        public string ProductName;
+        public int ProductCost;
+        public TypeOfProduct ProductType;
+        public int Condition;
+        public bool IsClosed;
+        public bool IsBought;
 
-    public void ChangeIsClosed(bool value)
-    {
-        IsClosed = value;
-        StateChanged?.Invoke();
-    }
+        public event Action StateChanged;
 
-    public void ChangeIsBought(bool value)
-    {
-        IsBought = value;
-        StateChanged?.Invoke();
+        public enum TypeOfProduct
+        {
+            Skin,
+            Location
+        }
+
+        public void ChangeIsClosed(bool value)
+        {
+            IsClosed = value;
+            StateChanged?.Invoke();
+        }
+
+        public void ChangeIsBought(bool value)
+        {
+            IsBought = value;
+            StateChanged?.Invoke();
+        }
     }
 }

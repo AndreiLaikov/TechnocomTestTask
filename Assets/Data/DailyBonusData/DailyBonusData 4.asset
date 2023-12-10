@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DayNumber: 4
   GiftSize: 10
-  IsRecieved: 0
   IsOpened: 0
+  IsRecieved: 0

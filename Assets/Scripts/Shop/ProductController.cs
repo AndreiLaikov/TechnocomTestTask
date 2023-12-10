@@ -1,29 +1,32 @@
 using TechnoApp.Managers;
 using UnityEngine;
 
-public class ProductController : MonoBehaviour
+namespace TechnoApp.Shop
 {
-    private CurrencyManager manager;
-    private ProductModel productModel;
-
-    public void Init(ProductModel model)
+    public class ProductController : MonoBehaviour
     {
-        productModel = model;
-        var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
-        productModel.IsClosed = currentLevel < productModel.Condition;
-        manager = CurrencyManager.Instance;
-    }
+        private CurrencyManager manager;
+        private ProductModel productModel;
 
-    public void OnItemBuy(int cost)
-    {
-        if (manager.GetCurrency() < cost)
+        public void Init(ProductModel model)
         {
-            Debug.Log("No enough money");//todo show popup "No money"
+            productModel = model;
+            var currentLevel = PlayerPrefs.GetInt("CurrentLevel", 1);
+            productModel.IsClosed = currentLevel < productModel.Condition;
+            manager = CurrencyManager.Instance;
         }
-        else
+
+        public void OnItemBuy(int cost)
         {
-            manager.AddCurrency(-cost);
-            productModel.ChangeIsBought(true);
+            if (manager.GetCurrency() < cost)
+            {
+                Debug.Log("No enough money");//todo show popup "No money"
+            }
+            else
+            {
+                manager.AddCurrency(-cost);
+                productModel.ChangeIsBought(true);
+            }
         }
     }
 }
