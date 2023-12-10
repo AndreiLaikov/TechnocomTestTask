@@ -36,7 +36,7 @@ namespace TechnoApp.Levels
                 currentLevel = levelNumber + 1;
             }
 
-            PlayerPrefs.SetInt("CurrentLevel", levelNumber);
+            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
             PlayerPrefs.Save();
 
             UpdateLevels();
