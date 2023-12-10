@@ -27,7 +27,7 @@ namespace TechnoApp.Managers
         {
             if (!IsSoundsMute)
             {
-               audioSource.PlayOneShot(buttonSound);
+                audioSource.PlayOneShot(buttonSound);
             }
         }
 

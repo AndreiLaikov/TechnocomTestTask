@@ -1,22 +1,19 @@
 using TechnoApp.Managers;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonClick : MonoBehaviour, IPointerClickHandler
+public class ButtonClick : MonoBehaviour
 {
-    private Selectable selectable;
+    private Button button;
 
-    void Start()
+    void Awake()
     {
-        selectable = GetComponent<Selectable>();
+        button = GetComponent<Button>();
+        button.onClick.AddListener(() => PlaySound());
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    private void PlaySound()
     {
-        if (selectable.interactable)
-        {
-            AudioManager.Instance.PlaySound();
-        }
+        AudioManager.Instance.PlaySound(); 
     }
 }

@@ -23,6 +23,6 @@ public abstract class ToggleClick : MonoBehaviour
 
     protected virtual void ToggleValueChanged(Toggle toggle)
     {
-        
+        AudioManager.Instance.PlaySound();
     }
 }

@@ -8,10 +8,12 @@ namespace TechnoApp.Dailybonus
 {
     public class DailyBonusController : MonoBehaviour
     {
-        private bool isShownToday;
+        private const int daysInWeek = 7;
         private int daysInRow;
+        private int recivedCount;
         private string lastDayPlayed_key = "LastDayPlayed";
         private string daysInRow_key = "DaysInRow";
+        private string recivedCount_key = "RecivedCount";
 
         [Header("UiElements")]
         public GameObject DailyBonusUI;
@@ -21,18 +23,14 @@ namespace TechnoApp.Dailybonus
 
         [Header("Models")]
         [SerializeField] private DailyBonusModel[] DailyBonusModels;
-        [SerializeField] private DailyBonusModel WeeklyBonusModel;
 
         [Header("Views")]
-        [SerializeField] private Transform dailyBonusesParent;
-        [SerializeField] private DailyBonusView Template;
-        [SerializeField] private DailyBonusView WeeklyBonusView;
+        [SerializeField] private DailyBonusView[] DailyBonusViews;
 
         private void Start()
         {
             DaysInRowCalculate();
-            PanelsCreate();
-            ShowUI();
+            UpdateValues();
         }
 
         private void DaysInRowCalculate()
@@ -43,75 +41,82 @@ namespace TechnoApp.Dailybonus
             var dateNow = GetWorldTime();
             var hoursSpan = (dateNow - lastDayPlayed).TotalHours;
             daysInRow = PlayerPrefs.GetInt(daysInRow_key);
+            recivedCount = PlayerPrefs.GetInt(recivedCount_key, -1);
 
             if (hoursSpan < 24)
             {
-                isShownToday = true;
                 return;
             }
 
             if (hoursSpan > 24 && hoursSpan < 48)
             {
                 daysInRow++;
+                if (daysInRow >= daysInWeek)
+                {
+                    ResetValues();
+                }
             }
             else if (hoursSpan > 48)
             {
-                daysInRow = 0;
+                ResetValues();
             }
 
             PlayerPrefs.SetInt(daysInRow_key, daysInRow);
+            PlayerPrefs.SetInt(recivedCount_key, recivedCount);
             PlayerPrefs.SetString(lastDayPlayed_key, dateNow.ToString());
             PlayerPrefs.Save();
+            ShowActiveUI();
         }
 
-        private void PanelsCreate()
+        private void UpdateValues()
         {
-            for (int i = 0; i < DailyBonusModels.Length; i++)
+            for (int i = 0; i < DailyBonusViews.Length; i++)
             {
                 DailyBonusModels[i].IsOpened = i <= daysInRow;
-                var obj = Instantiate(Template, dailyBonusesParent);
-                obj.model = DailyBonusModels[i];
-                obj.controller = this;
+                DailyBonusModels[i].IsRecieved = i <= recivedCount;
+                DailyBonusViews[i].model = DailyBonusModels[i];
+                DailyBonusViews[i].controller = this;
+                DailyBonusViews[i].CheckStatus();
             }
-
-            WeeklyBonusModel.IsOpened = true;
-            WeeklyBonusView.model = WeeklyBonusModel;
-            WeeklyBonusView.controller = this;
 
             progress.SetValues(daysInRow);
         }
 
-        private void ShowUI()
+        private void ResetValues()
         {
-            if (isShownToday)
-                return;
+            daysInRow = 0;
+            recivedCount = -1;
+            ResetModels();
+        }
 
-            if (daysInRow < 6)
+        private void ResetModels()
+        {
+            foreach (var model in DailyBonusModels)
+            {
+                model.IsOpened = false;
+                model.IsRecieved = false;
+            }
+        }
+
+        public void ShowActiveUI()
+        {
+           if (daysInRow < daysInWeek - 1)
             {
                 activeUI = DailyBonusUI;
             }
             else
             {
                 activeUI = WeeklyBonusUI;
-                daysInRow = 0;
-                PlayerPrefs.SetInt(daysInRow_key, daysInRow);
-                PlayerPrefs.Save();
             }
 
-            ShowActiveUI();
-        }
-
-        public void ShowActiveUI()
-        {
-            if (activeUI == null)
-            {
-                activeUI = DailyBonusUI;
-            }
             activeUI.SetActive(true);
         }
 
         public void OnBonusRecieved(int value)
         {
+            recivedCount++;
+            PlayerPrefs.SetInt(recivedCount_key, recivedCount);
+            PlayerPrefs.Save();
             activeUI.SetActive(false);
             CurrencyManager.Instance.AddCurrency(value);
         }

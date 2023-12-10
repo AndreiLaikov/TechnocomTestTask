@@ -20,14 +20,12 @@ namespace TechnoApp.Dailybonus
         {
             dayNumber.text = PeriodName + model.DayNumber.ToString();
             giftSize.text = Prefix + model.GiftSize.ToString();
-            isRecieved.enabled = model.IsRecieved;
-
-            dailyBonusButton.interactable = model.IsOpened && !model.IsRecieved;
+            CheckStatus();
 
             dailyBonusButton.onClick.AddListener(()=>GetBonus());
         }
 
-        public void InteractableChange()
+        public void CheckStatus()
         {
             isRecieved.enabled = model.IsRecieved;
             dailyBonusButton.interactable = model.IsOpened && !model.IsRecieved;
@@ -37,7 +35,7 @@ namespace TechnoApp.Dailybonus
         {
             controller.OnBonusRecieved(model.GiftSize);
             model.IsRecieved = true;
-            InteractableChange();
+            CheckStatus();
         }
     }
 }

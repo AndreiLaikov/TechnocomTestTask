@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 3835119787595588480}
   - component: {fileID: 3516124851942751084}
   - component: {fileID: 5427403728042902124}
-  - component: {fileID: 1170045883397517283}
   m_Layer: 5
   m_Name: SpeakerToggle
   m_TagString: Untagged
@@ -212,18 +211,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef995b68b0eda4caca5e1679382c523d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1170045883397517283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721400100248443168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &870866424006490759
@@ -448,7 +435,6 @@ GameObject:
   - component: {fileID: 5825685351487498191}
   - component: {fileID: 2750948758350554842}
   - component: {fileID: 570020331881702613}
-  - component: {fileID: 7691867067558200919}
   - component: {fileID: 2881501108801201224}
   m_Layer: 5
   m_Name: MusicToggle
@@ -563,18 +549,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 0
---- !u!114 &7691867067558200919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3447115584799696813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7406e9e2bb8dd414f827711d6e0139c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2881501108801201224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1501034452050857590
 RectTransform:
   m_ObjectHideFlags: 0

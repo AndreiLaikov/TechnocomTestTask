@@ -4,6 +4,7 @@ public class MusicMute : ToggleClick
 {
     protected override void ToggleValueChanged(Toggle toggle)
     {
+        base.ToggleValueChanged(toggle);
         audioManager.SetMusicMute(toggle.isOn);
     }
 
@@ -11,4 +12,6 @@ public class MusicMute : ToggleClick
     {
         Toggle.isOn = audioManager.IsMusicMute;
     }
+
+
 }
